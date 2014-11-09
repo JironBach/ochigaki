@@ -6,14 +6,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="Description" content="Ochigaki占いの館">
 <meta name="Keywords" content="占い,母">
-<title>Ochigaki占いの館</title>
+<title>Ochigaki母の占いの館</title>
 <%= stylesheet_link_tag    'application', media: 'all' %>
 <%= javascript_include_tag 'application' %>
 <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="wrapper">
 
+<%= render partial: 'layouts/header' %>
+<%= render partial: 'layouts/globalnavi' %>
+
+<div id="contents">
+<!-- パン屑リスト -->
+<p class="topic-path"><a href="index.html">Home</a> &gt; 無料テンプレート</p>
+<!-- コンテンツ ここから -->
+<%= yield %>
+<!-- コンテンツ ここまで -->
+</div><!-- / contents end -->
+
+<%= render partial: 'layouts/sidebar' %>
+<%= render partial: 'layouts/footer' %>
+
+</div><!-- / wrapper end -->
 </body>
 </html>
