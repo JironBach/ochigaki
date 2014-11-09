@@ -1,0 +1,2 @@
+module DivineHelper
+end

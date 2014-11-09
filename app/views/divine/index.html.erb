@@ -1,0 +1,16 @@
+<%= form_tag divine_path, method: :post do %>
+  お名前<%= text_field_tag(:name, '', size: 12) %>
+  <br />
+  生年月日<%= date_select(
+          :divine,
+          :birth_date,
+          use_month_numbers: true,
+          start_year:     1930,
+          end_year:       (Time.now.year - 8),
+          default:       Date.new(Time.now.year - 16, Time.now.month, Time.now.day),
+          date_separator: '/') %>
+  <br />
+  <%= select_tag(:gender, options_for_select([['女性', 'f'], ['男性', 'm']])) %>
+  <br />
+  <%= submit_tag '占う' %>　
+<% end %>
