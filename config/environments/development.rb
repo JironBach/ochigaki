@@ -35,9 +35,9 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  config.serve_static_assets = true
+  config.serve_static_assets = false
   config.assets.compress = false
-  config.assets.compile = false
+  config.assets.compile = true
   config.assets.precompile = ['*.js', '*.css']
   config.assets.digest = false
 end
