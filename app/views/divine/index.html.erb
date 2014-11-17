@@ -12,21 +12,21 @@
   <br />
   <%= select_tag(:gender, options_for_select([['女性', 'f'], ['男性', 'm']])) %>
   <br />
-  <%= submit_tag '占う' %>　
   <br />
-  相手のお名前<%= text_field_tag(:p_name, '', size: 12) %>
+  相手のお名前<%= text_field_tag(:partner_name, '', size: 12) %>
   <br />
   相手の生年月日<%= date_select(
           :divine,
-          :p_birth_date,
+          :partner_birth_date,
           use_month_numbers: true,
           start_year:     1930,
           end_year:       (Time.now.year - 8),
           default:       Date.new(Time.now.year - 16, Time.now.month, Time.now.day),
           date_separator: '/') %>
   <br />
-  <%= select_tag(:p_gender, options_for_select([['女性', 'f'], ['男性', 'm']])) %>
+  <%= select_tag(:partner_gender, options_for_select([['女性', 'f'], ['男性', 'm']])) %>
   <br />
-  <%= submit_tag '相手との相性を占う' %>　
+  <br />
+  <%= submit_tag '占う' %>　
 
 <% end %>
